@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-test.com.TjmaxTest" class="navigator-link">
-              <span class="suite-name border-passed">test.com.TjmaxTest</span>
+              <span class="suite-name border-failed">test.com.TjmaxTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-test.com.TjmaxTest" class="hide-methods passed suite-test.com.TjmaxTest"> (hide)</a> <!-- hide-methods passed suite-test.com.TjmaxTest -->
-                      <a href="#" panel-name="suite-test.com.TjmaxTest" class="show-methods passed suite-test.com.TjmaxTest"> (show)</a> <!-- show-methods passed suite-test.com.TjmaxTest -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-test.com.TjmaxTest" class="hide-methods failed suite-test.com.TjmaxTest"> (hide)</a> <!-- hide-methods failed suite-test.com.TjmaxTest -->
+                      <a href="#" panel-name="suite-test.com.TjmaxTest" class="show-methods failed suite-test.com.TjmaxTest"> (show)</a> <!-- show-methods failed suite-test.com.TjmaxTest -->
                     </span>
-                    <div class="method-list-content passed suite-test.com.TjmaxTest">
+                    <div class="method-list-content failed suite-test.com.TjmaxTest">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-test.com.TjmaxTest" title="test.com.TjmaxTest" class="method navigator-link" hash-for-method="testLoginTestCase1">testLoginTestCase1</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-test.com.TjmaxTest" title="test.com.TjmaxTest" class="method navigator-link" hash-for-method="testPerTestCase">testPerTestCase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-test.com.TjmaxTest -->
+                    </div> <!-- method-list-content failed suite-test.com.TjmaxTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,21 +116,43 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-test.com.TjmaxTest" class="panel test.com.TjmaxTest">
-          <div class="suite-test.com.TjmaxTest-class-passed">
+          <div class="suite-test.com.TjmaxTest-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">test.com.TjmaxTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLoginTestCase1">
-                  </a> <!-- testLoginTestCase1 -->
-                  <span class="method-name">testLoginTestCase1</span>
+                  <a name="testPerTestCase">
+                  </a> <!-- testPerTestCase -->
+                  <span class="method-name">testPerTestCase</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#shippingfirstNameInput&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SWETASLP&apos;, ip: &apos;192.168.1.17&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Sweta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51555}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f72ee9b0125717331e00572d83245bb4
+*** Element info: {Using=id, value=shippingfirstNameInput}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at test.com.TjmaxTest.testPerTestCase(TjmaxTest.java:194)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-test.com.TjmaxTest-class-passed -->
+          </div> <!-- suite-test.com.TjmaxTest-class-failed -->
         </div> <!-- panel test.com.TjmaxTest -->
         <div panel-name="test-xml-test.com.TjmaxTest" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -184,14 +206,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLoginTestCase1')
+data.setCell(0, 1, 'testPerTestCase')
 data.setCell(0, 2, 'test.com.TjmaxTest')
-data.setCell(0, 3, 13171);
+data.setCell(0, 3, 38729);
 window.suiteTableData['test.com.TjmaxTest']= { tableData: data, tableDiv: 'times-div-test.com.TjmaxTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-test.com.TjmaxTest">
               </div> <!-- times-div-test.com.TjmaxTest -->
             </div> <!-- times-div -->
@@ -224,19 +246,21 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpMethod</span>
-                <span class="method-start">8 ms</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testLoginTestCase1</span>
-                <span class="method-start">8 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testPerTestCase</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownMethod</span>
-                <span class="method-start">13179 ms</span>
+                <span class="method-start">38737 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">13291 ms</span>
+                <span class="method-start">38842 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -5,8 +5,8 @@
     <classes>
       <class name="test.com.TjmaxTest">
         <methods>
+          <include name="testPerTestCase"/>
           <include name="setUpClass"/>
-          <include name="testLoginTestCase1"/>
           <include name="tearDownMethod"/>
           <include name="setUpMethod"/>
           <include name="tearDownClass"/>
